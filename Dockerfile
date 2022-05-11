@@ -8,11 +8,11 @@ COPY ./api ./api
 
 WORKDIR /server/api
 
-RUN npm ci
+RUN npm install --force
 
 RUN npm run build
 
-RUN rm -rf ./api/src
+RUN rm -rf ./src
 
 # REST API ----------------------- End
 
@@ -24,11 +24,11 @@ COPY ./users ./users
 
 WORKDIR /server/users
 
-RUN npm ci
+RUN npm install --force
 
 RUN npm run build
 
-RUN rm -rf ./users/src
+RUN rm -rf ./src
 
 # Users Service ------------------ End
 
