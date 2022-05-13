@@ -9,7 +9,7 @@ async function bootstrap() {
     options: {
       url: '127.0.0.1:3001',
       package: 'app',
-      protoPath: './users/.packages/app.proto',
+      protoPath: __dirname + '/../.packages/app.proto',
     },
   });
   await app.listen().then(() => {

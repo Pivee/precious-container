@@ -15,7 +15,7 @@ export class AppController implements OnModuleInit {
     options: {
       url: '127.0.0.1:3001',
       package: 'app',
-      protoPath: './api/.packages/app.proto',
+      protoPath: __dirname + '/../.packages/app.proto',
     },
   })
   private readonly grpcClient: ClientGrpc;
